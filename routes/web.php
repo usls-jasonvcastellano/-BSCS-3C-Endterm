@@ -16,3 +16,7 @@ Route::get('/login', function () {
 Route::get('/inventory', function () {
     return view('inventory');
 })->name('inventory');
+
+Route::get('/inventory/create', function () {
+    return view('inventory.create'); 
+})->name('inventory.create');
