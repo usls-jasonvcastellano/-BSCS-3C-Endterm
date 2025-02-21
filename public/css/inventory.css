@@ -1,0 +1,102 @@
+/* 🌅 Background with a modern gradient */
+body {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  /* 🎁 Inventory Box (Glassmorphism) */
+  .inventory-box {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* 🎯 Centering Container */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* 🎨 Title */
+  .inventory-title {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 🎯 Add Item Button */
+  .btn-add {
+    background: #16a34a;
+    border: none;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-add:hover {
+    background: #12833d;
+    transform: translateY(-2px);
+  }
+  
+  /* 📝 Table Styling */
+  .table {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .table thead {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .table th {
+    text-align: left;
+    padding: 12px;
+  }
+  
+  .table td {
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* 🛠 Edit & Delete Buttons */
+  .btn-edit,
+  .btn-delete {
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    color: white;
+  }
+  
+  .btn-edit {
+    background: #007bff;
+  }
+  
+  .btn-edit:hover {
+    background: #0056b3;
+  }
+  
+  .btn-delete {
+    background: red;
+  }
+  

@@ -8,3 +8,11 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', [HelloController::class, 'index']);
+
+Route::get('/login', function () {
+    return view('auth.login'); // 
+})->name('login');
+
+Route::get('/inventory', function () {
+    return view('inventory');
+})->name('inventory');
