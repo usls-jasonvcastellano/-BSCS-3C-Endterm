@@ -21,3 +21,9 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+inventory
+midterm-exam
+.bash_history
+.gitconfig
+llama.blend.blend
+starter.blend
