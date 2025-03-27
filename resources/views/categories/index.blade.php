@@ -2,8 +2,9 @@
 
 
 @section('content')
-<button class="btn btn-success btn=sm">Add Inventory</button>
+
 <div class="container">
+    <button class="btn btn-success btn=sm">Add Inventory</button>
     <h2 class="mb-4">Categories List</h2>
     <table class="table table-bordered table-hover">
         <thead class="thead-dark">
@@ -22,4 +23,15 @@
         </tbody>
     </table>
 </div>
+<style>
+    .container {
+        border: 1px solid black;
+        padding: 20px 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+        color: black;
+    }
+</style>
 @endsection
+

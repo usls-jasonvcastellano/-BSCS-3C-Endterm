@@ -16,15 +16,5 @@
  <body>
     @yield('content')
  </body>
- 
+
  </html>
- <style>
-     .card {
-         border: 1px solid black;
-         padding: 20px 20px;
-         border-radius: 10px;
-         backdrop-filter: blur(20px);
-         box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-         color: black;
-     }
- </style>
