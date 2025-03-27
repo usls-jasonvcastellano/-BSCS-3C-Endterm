@@ -1,6 +1,8 @@
 @extends('template.main')
 
+
 @section('content')
+<button class="btn btn-success btn=sm">Add Inventory</button>
 <div class="container">
     <h2 class="mb-4">Categories List</h2>
     <table class="table table-bordered table-hover">

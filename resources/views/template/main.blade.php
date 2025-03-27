@@ -14,39 +14,7 @@
  </head>
  
  <body>
-     <div class="container">
-         <br /><br />
-         <div class="row">
-             <div class="card">
-                 <div class="card-body">
-                     <button class="btn btn-success btn=sm">Add Inventory</button>
-                     <table class="table">
-                         <thead>
-                             <tr>
-                                 <th scope="col">Category</th>
-                                 <th scope="col">Description</th>
-                                 <th scope="col">Action</th>
-                             </tr>
-                         </thead>
-                         <tbody>
-                             @foreach ($categories as $category)
-                                 <tr>
-                                     <td> {{$category->name}}</td>
-                                     <td> {{$category->description}}</td>
-                                     <td>
-                                         <button class="btn btn-info btn=sm">Edit</button>
-                                         <button class="btn btn-danger btn=sm">Delete</button>
-                                     </td>
-                                 </tr>
- 
-                             @endforeach
- 
-                         </tbody>
-                     </table>
-                 </div>
-             </div>
-         </div>
-     </div>
+    @yield('content')
  </body>
  
  </html>
