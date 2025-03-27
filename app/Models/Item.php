@@ -1,17 +1,10 @@
 <?php
 
-class Item {
+namespace App\Models;
 
-    public function Category() {
-        return $this->hasOne(Category::class, 'category_id', 'id');
-    }
+use Illuminate\Database\Eloquent\Model;
 
-
-
-
-
+class Item extends Model
+{
+    //
 }
-
-$item = Item::with(['Category'])->find(1);
-
-//array ??
