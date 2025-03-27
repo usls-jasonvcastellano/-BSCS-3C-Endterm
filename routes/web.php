@@ -15,7 +15,7 @@ Route::get('/', function () {
 });
 
 Route::get('/Hello', [HelloWorld::class, 'index']);
-Route::get('/create', [Create::class, 'create']);
+Route::get('/create', [Create::class, 'create'])->name('create');
 Route::get('/login', [LoginController::class, 'login']);
 Route::post('/login', [LoginController::class, 'auth']);
 Route::get('/Inventory', [InventoryController::class, 'Inv']);

@@ -14,11 +14,8 @@
                 <h2 class="fw-bold mb-3">Inventory</h2>
 
     
-                <button class="btn btn-primary mb-3">Add Product</button>
+                <a href="{{ route('create') }}" button class="btn btn-primary mb-3">Add Product</a>
                     
-
-
-
                 <div class="row bg-light p-3 rounded fw-bold text-center">
                     <div class="col">Category</div>
                     <div class="col">Item Name</div>
@@ -31,11 +28,10 @@
                     <div class="col"> </div>
                     <div class="col"> </div>
                     <div class="col"> </div>
-                    <div class="col"> 
+                    <div class="col">
                     <button class="btn btn-warning btn-sm">Edit</button>
                         <button class="btn btn-danger btn-sm">Delete</button>
                     </div>
-                
                 </div>
             </div>
         </div>
