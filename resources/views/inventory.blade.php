@@ -96,3 +96,24 @@
   </script>
 
 </html>
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    padding: 5px 15px;
+    z-index: 1;
+}
+
+.highlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4d44d;
+    transform: skewX(-5deg);
+    z-index: -1;
+}
+
+<span style="background-color: #EBD96B; padding: 5px 15px; display: inline-block;">UNIQUENESS</span> 

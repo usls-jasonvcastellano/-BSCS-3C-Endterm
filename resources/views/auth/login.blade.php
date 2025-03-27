@@ -12,16 +12,7 @@
 </head>
 <body class="font-poppins ">
 
-<div class="relative min-h-screen bg-white">
-  <!-- Left Side Background -->
-  <div class="absolute top-0 left-0 h-full w-1/5 bg-cover bg-center" style="background-image: url('your-image.jpg');"></div>
-
-  <!-- Right Side Background -->
-  <div class="absolute top-0 right-0 h-full w-1/5 bg-cover bg-center" style="background-image: url('your-image.jpg');"></div>
-
-  <!-- Main Content -->
-  <div class="relative z-10 mx-auto w-3/5 p-8">
-    <div class="md:flex md:h-screen">
+<div class="md:flex md:h-screen">
     <div class="relative w-3/10 container w-[90%] mx-auto mt-32  flex items-center justify-center md:mt-0 z-10">
     <div class="card bg-white border border-black border-light-gray shadow p-5 rounded-lg min-w-[200px] w-full max-w-[550px] md:mx-4 md:border-none md:shadow-none">
         <form method="POST" action='/login' > 
@@ -46,10 +37,21 @@
 </div>
 <div class="absolute top-0 inset-0 z-0 w-7/10 h-64 w-full md:static md:block md:p-4 md:h-full"><img src="{{ asset('img/login.jpg') }}" class="w-full h-full object-cover rounded-lg" /></div>
 </div>
-  </div>
-</div>
-
-
 
 </body>
 </html>
+
+<body>
+    <div class="login-container text-center">
+        <h3 class="mb-3">Login</h3>
+        <form method="POST" action='/login' > 
+                @csrf()
+                <input type="text" name="username_or_email" class="form-control" placeholder="Username or Email" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+    </div>
+</body>
