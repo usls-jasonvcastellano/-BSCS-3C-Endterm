@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="container">
-    <button class="btn btn-success btn=sm">Add Inventory</button>
+    <a href="http://127.0.0.1:8000/create" class="btn btn-success btn=sm" >Add Inventory</a>
     <h2 class="mb-4">Categories List</h2>
     <table class="table table-bordered table-hover">
         <thead class="thead-dark">
