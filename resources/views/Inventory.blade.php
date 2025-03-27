@@ -27,14 +27,15 @@
                     <div class="col">Action</div>
                 </div>
                 <div class="row p-3 border-bottom align-items-center text-center">
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col">$</div>
-                    <div class="col">
-                        <button class="btn btn-warning btn-sm">Edit</button>
+                    <div class="col"> </div>
+                    <div class="col"> </div>
+                    <div class="col"> </div>
+                    <div class="col"> </div>
+                    <div class="col"> 
+                    <button class="btn btn-warning btn-sm">Edit</button>
                         <button class="btn btn-danger btn-sm">Delete</button>
                     </div>
+                
                 </div>
             </div>
         </div>
