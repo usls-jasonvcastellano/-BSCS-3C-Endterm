@@ -1,0 +1,16 @@
+.button {
+    background-color: #28a745; /* Green (Bootstrap success color) */
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.8);
+    transform: scale(1.05);
+}
