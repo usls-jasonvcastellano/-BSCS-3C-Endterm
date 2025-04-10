@@ -16,5 +16,15 @@ class CategoryController extends Controller
         'categories' => $categories
 
         ]);
+
+        return view('categories.index');
     }
+
+    public function create()
+    {
+        return view('inv.create');
+    }
+
+
 }
+
