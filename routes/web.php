@@ -13,3 +13,4 @@ Route::get('/inventory','App\Http\Controllers\InventoryController@index');
 Route::get('/hello','App\Http\Controllers\HelloController@index');
 Route::get('/create','App\Http\Controllers\InventoryController@create');
 Route::get('/category','App\Http\Controllers\CategoryController@index');
+Route::get('/edit','App\Http\Controllers\CategoryController@edit');
