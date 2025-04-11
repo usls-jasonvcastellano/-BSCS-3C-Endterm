@@ -1,17 +1,14 @@
 <?php
 
-class Item {
+namespace App\Models;
 
-    public function Category() {
-        return $this->hasOne(Category::class, 'category_id', 'id');
-    }
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
+class Item extends Model
+{
+    use HasFactory;
 
-
-
-
+    // Add attributes like fillable or guarded if necessary
+    protected $fillable = ['item_name', 'qty', 'price', 'category_id'];
 }
-
-$item = Item::with(['Category'])->find(1);
-
-//array ??
