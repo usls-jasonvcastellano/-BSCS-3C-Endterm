@@ -34,7 +34,8 @@
                 <td>{{ $item->category_id }}</td>
                 <td>{{ $item->item_name }}</td>
                 <td>{{ $item->price }}</td>
-                <td><button class="btn btn-info btn-sm">Edit</button>
+                <td>
+                <a href="/inv/{{ $item->id }}/edit" class="btn btn-sm btn-info">Edit</a>
                 <button class="btn btn-danger btn-sm">Delete</button>
                 </td>
 
