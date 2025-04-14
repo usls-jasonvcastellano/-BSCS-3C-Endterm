@@ -3,87 +3,68 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use Illuminate\Http\Request;
-use View;
 use App\Models\Items;
+use Illuminate\Http\Request;
 
 class InventoryController extends Controller
 {
-    public function index(){
-
+    public function index()
+    {
         $items = Items::all();
 
         return view("inventory.index")->with([
-
-            'items'=> $items
-
+            'items' => $items
         ]);
     }
 
+    public function create()
+    {
+        $categories = Category::all();
 
-    public function create(){
-            $categories = Category::all();
-
-        return view('inventory.create',[
-
+        return view('inventory.create', [
             'categories' => $categories,
-
         ]);
-
     }
-    public function category(){
 
+    public function category()
+    {
         return view("inventory.category");
-
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
 
-        $items = Items::find($id);
+
+        $item = Items::find($id);
+        if (!$item) {
+            return redirect()->back()->withErrors(['Item not found']);
+        }
+
         $categories_data = Category::all();
 
-        $categories=[];
-
-        foreach ($categories_data as $category){
-            $categories[$category->]=$category->name;
-
+        $categories = [];
+        foreach ($categories_data as $category) {
+            $categories[$category->id] = $category->name;
         }
 
         return view('inventory.edit')->with([
-                'items'=> $items,
-                'categories'=> $categories
-
-
+            'item' => $item,
+            'categories' => $categories
         ]);
-
-
-
     }
 
+    public function update(Request $request, $id)
+    {
+        $item = Items::find($id);
+        if (!$item) {
+            return redirect()->back()->withErrors(['Item not found']);
+        }
 
-    public function update(Request $request, $id){
+        $item->item_name = $request->input('itemname');
+        $item->price = $request->input('price');
+        $item->category_id = $request->input('category_id');
+        $item->save();
 
-        $items = Items::find($id);
-        $items->item_name = $request->input('itemname'),
-        $items->price = $request->input('price'),
-
-
-        $items->save();
-
-        Items::where(['id'=.$id])->update([
-            'itemname'=>$request->input('itemname')
-            'price'=>$request->input('price')
-
-
-
-
-        ]);
-
-
-
-
+        return redirect()->to('/inventory');
     }
-
-
-
 }

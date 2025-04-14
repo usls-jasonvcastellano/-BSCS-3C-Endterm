@@ -51,7 +51,10 @@
                       <td>{{ $item-> item_name}}</td>
                       <td>{{ $item-> price }}</td>
                       <td>
-                        <button class="btn btn-info"><span><i class="bi bi-pencil-square"></i></span> Edit</button>
+                        <a class="btn btn-info" href="/inventory/{{ $item->id }}/edit">
+                          <span><i class="bi bi-pencil-square"></i></span> Edit
+                        </a>
+                        
                         <button class="btn btn-danger"><span><i class="bi bi-trash"></i></span>Delete</button>
                       </td>
                       

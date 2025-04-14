@@ -10,80 +10,79 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>Edit Item</title>
   </head>
   <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="card col-md-8 p-4">
+          <div class="card-body">
 
-    <div class="container">
-      <div class="row">
-        <div class="card">
-          <br>
-          <div class="card=body">
-            <a type="Back" class="btn btn-primary" href="/inventory">BACK</a>
-            <br>
-            <br>
+            <a class="btn btn-primary mb-3" href="/inventory">BACK</a>
 
-            <div class="mb-3">
-              <div class="form-group">
-                <label for="exampleInputPassword1">Categories:</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Select Category</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+            <h3 class="mb-4 text-center">Edit Inventory Item</h3>
+
+            <form action="/inventory/{{ $item->id }}" method="POST">
+              @csrf
+              @method("PUT")
+
+              <div class="mb-3">
+                <label for="category_id" class="form-label">Category:</label>
+                <select name="category_id" class="form-select" required>
+                  <option value="">-- Select Category --</option>
+                  @foreach($categories as $id => $name)
+                      <option value="{{ $id }}" {{ $item->category_id == $id ? 'selected' : '' }}>
+                          {{ $name }}
+                      </option>
+                  @endforeach
+
+
                 </select>
               </div>
-    
-    
-            </div>
-            <div class="mb-3">
-              <div class="form-group">
-                <label for="exampleInputPassword1">Item name:</label>
-                <input type="item name" class="form-control" id="itemname" placeholder="Item Name">
-              </div>
-    
-    
-            </div>
-            <div class="mb-3">
-              <div class="form-group">
-              <label for="exampleInputPassword1">Price:</label>
-                <input type="item name" class="form-control" id="price" placeholder="Price">
-              </div>
-              <div class="mb-3">
-                <div class="form-group">
-                <label for="exampleInputPassword1">Quantity:</label>
-                <input type="item name" class="form-control" id="qty" placeholder="Quantity">
-                </div>
-                <br>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                
-    
-    
-            </div>
 
+              <div class="mb-3">
+                <label for="itemname" class="form-label">Item Name:</label>
+                <input
+                  type="text"
+                  name="itemname"
+                  id="itemname"
+                  class="form-control"
+                  value="{{ old('itemname', $item->item_name) }}"
+                  placeholder="Item Name"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="price" class="form-label">Price:</label>
+                <input
+                  type="number"
+                  name="price"
+                  id="price"
+                  class="form-control"
+                  step="0.01"
+                  value="{{ old('price', $item->price) }}"
+                  placeholder="Enter price"
+                  required
+                />
+              </div>
+
+              
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-success">Update Item</button>
+              </div>
+
+            </form>
           </div>
         </div>
-          
-        
-
-
-
       </div>
-
-
     </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
 </html>
-
-
-      
-      
-      

@@ -28,7 +28,7 @@
                 class="d-flex justify-content-between align-items-center mb-3"
               >
                 <h3 class="card-title">Categories</h3>
-                <a class="btn btn-success" href="/create"><span><i class="bi bi-plus-circle"></i></span> Add Categrory</a>
+                <a class="btn btn-success" href="/category/create"><span><i class="bi bi-plus-circle"></i></span> Add Categrory</a>
               </div>
               <div class="table-responsive">
                 <table class="table">
