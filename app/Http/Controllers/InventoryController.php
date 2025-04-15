@@ -36,9 +36,7 @@ class InventoryController extends Controller
 
 
         $item = Items::find($id);
-        if (!$item) {
-            return redirect()->back()->withErrors(['Item not found']);
-        }
+        
 
         $categories_data = Category::all();
 
@@ -56,10 +54,7 @@ class InventoryController extends Controller
     public function update(Request $request, $id)
     {
         $item = Items::find($id);
-        if (!$item) {
-            return redirect()->back()->withErrors(['Item not found']);
-        }
-
+        
         $item->item_name = $request->input('itemname');
         $item->price = $request->input('price');
         $item->category_id = $request->input('category_id');
