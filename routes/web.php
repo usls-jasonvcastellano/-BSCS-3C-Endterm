@@ -17,3 +17,10 @@ Route::put('/inventory/{id}','App\Http\Controllers\InventoryController@update');
 
 Route::get('/category','App\Http\Controllers\CategoryController@index');
 Route::get('/category/create','App\Http\Controllers\CategoryController@create');
+Route::post('/category/store','App\Http\Controllers\CategoryController@store');
+Route::get('/categories', 'App\Http\Controllers\CategoryController@index')->name('category.index');
+Route::get('/categories/{id}/edit','App\Http\Controllers\CategoryController@edit');
+Route::put('/categories/{id}','App\Http\Controllers\CategoryController@update');
+
+
+

@@ -29,9 +29,9 @@
               <div class="mb-3">
                 <label for="category_id" class="form-label">Category:</label>
                 <select name="category_id" class="form-select" required>
-                  <option value="">-- Select Category --</option>
+                  <option value=""> Select Category </option>
                   @foreach($categories as $id => $name)
-                      <option value="{{ $id }}" {{ $item->category_id == $id ? 'selected' : '' }}>
+                      <option value="{{ $id }}">
                           {{ $name }}
                       </option>
                   @endforeach

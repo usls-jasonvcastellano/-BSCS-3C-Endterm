@@ -47,7 +47,9 @@
                       <td>{{ $category-> category_name }}</td>
                       <td>{{ $category-> description }}</td>
                       <td>
-                        <button class="btn btn-info" ><span><i class="bi bi-pencil-square"></i></span>  Edit  </button>
+                        <a class="btn btn-info" href="/categories/{{ $category->id }}/edit">
+                            <span><i class="bi bi-pencil-square"></i></span> Edit
+                          </a>
                         <button class="btn btn-danger"><span><i class="bi bi-trash"></i></span>Delete</button>
                       </td>
                     </tr>

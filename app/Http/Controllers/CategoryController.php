@@ -17,9 +17,62 @@ class CategoryController extends Controller
             'categories'=> $categories
 
         ]);
+
+        
+
+    }
+
+    public function create(){
+
+        return view('categories.create');
+
+
+    }
+
+    public function edit($id)
+    {
+        $category = Category::find($id);
+
+        if (!$category) {
+            return redirect()->back()->withErrors(['Category not found']);
+        }
+
+        return view('categories.edit', compact('category'));
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        $category = Category::find($id);
+
+        if (!$category) {
+            return redirect()->back()->withErrors(['Category not found']);
+        }
+
+        $validated = $request->validate([
+            'category_name' => 'required|string|max:255',
+            'description' => 'nullable|string'
+        ]);
+
+        $category->update($validated);
+
+        return redirect()->route('category.index');
     }
 
   
-
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'category_name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+        ]);
+        \App\Models\Category::create($validated);
+        
+    
+        return redirect('/category');
+    }
+    
 
 }
+
+
