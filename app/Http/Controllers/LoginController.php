@@ -12,6 +12,12 @@ class LoginController extends Controller
     }
 
     public function auth(Request $request){
+        
+        //$request->validate([
+        //    'email'=>'required',
+        //    'password'=>'required'
+        //]);
+        
         return redirect("/inventory");
 
     }

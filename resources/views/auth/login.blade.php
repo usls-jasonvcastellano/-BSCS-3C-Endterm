@@ -20,6 +20,18 @@
           <div class="card mt-5">
             <div class="card-body">
               <h3 class="card-title text-center mb-4">Login</h3>
+
+              
+              
+                
+
+              @if ($errors->any())
+                    @foreach ($errors->all() as $error )
+                        <div>{{$error}}</div>
+                        
+                    @endforeach
+                @endif
+                
               <form method="POST" action="/login">
                 @csrf()
                 <div class="form-group mb-3">

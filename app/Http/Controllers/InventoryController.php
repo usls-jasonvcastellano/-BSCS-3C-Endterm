@@ -42,7 +42,7 @@ class InventoryController extends Controller
 
         $categories = [];
         foreach ($categories_data as $category) {
-            $categories[$category->id] = $category->name;
+            $categories[$category->id] = $category->category_name;
         }
 
         return view('inventory.edit')->with([
